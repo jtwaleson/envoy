@@ -2,6 +2,7 @@ import unittest
 import envoy
 import time
 
+
 class SimpleTest(unittest.TestCase):
 
     def test_input(self):
@@ -25,6 +26,7 @@ class SimpleTest(unittest.TestCase):
         r = envoy.run("python -c 'print \"%s\"'" % sentinel)
         self.assertEqual(r.std_out.rstrip(), sentinel)
         self.assertEqual(r.status_code, 0)
+
 
 class ConnectedCommandTests(unittest.TestCase):
 

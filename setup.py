@@ -10,8 +10,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-
-
 if sys.argv[-1] == "publish":
     os.system("python setup.py sdist upload")
     sys.exit()
@@ -26,7 +24,7 @@ setup(
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
     url='https://github.com/kennethreitz/envoy',
-    packages= ['envoy'],
+    packages=['envoy'],
     install_requires=required,
     license='MIT',
     classifiers=(
